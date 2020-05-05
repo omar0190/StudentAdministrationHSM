@@ -35,12 +35,12 @@ public class StudentRepositoryDB implements IStudentRepository {
     @Override
     public List<Student> readAllStudents(){
         try {
-            PreparedStatement stmntnRead = conn.prepareStatement("SELECT * FROM student");
+            PreparedStatement stmntn = conn.prepareStatement("SELECT * FROM student");
 
 
-            ResultSet resultSet = stmntnRead.executeQuery("SELECT * FROM student");
+            ResultSet resultSet = stmntn.executeQuery("SELECT * FROM student");
 
-            System.out.println(resultSet.getString(1) + resultSet.getString(2) + resultSet.getString(3) + resultSet.getInt(4 ));
+            System.out.println(resultSet.getInt(1) + resultSet.getString(2) + resultSet.getString(3) + resultSet.getString( 4 ));
 
         } catch (SQLException e) {
             e.printStackTrace();
