@@ -10,15 +10,15 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 public class DatabaseConnectionManager {
-    private String url;
-    private String user;
-    private String password;
-    private Connection conn;
+    private static String url;
+    private static String user;
+    private static String password;
+    private static Connection conn;
 
     public DatabaseConnectionManager() {
     }
 
-    public Connection getConnection(){
+    public static Connection getConnection(){
         Properties prop = new Properties();
         try{
             FileInputStream propFile = new FileInputStream("src/main/resources/application.properties");
