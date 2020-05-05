@@ -35,6 +35,14 @@ public class StudentRepositoryDB implements IStudentRepository {
     public List<Student> readAllStudents() {
         return null;
     }
+    {
+        try {
+            PreparedStatement stmnt = conn.prepareStatement("SELECT * FROM student");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
 
     @Override
     public Student readStudent(int cpr) {
