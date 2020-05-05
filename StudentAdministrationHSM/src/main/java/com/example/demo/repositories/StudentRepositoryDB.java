@@ -32,10 +32,7 @@ public class StudentRepositoryDB implements IStudentRepository {
     }
 
     @Override
-    public List<Student> readAllStudents() {
-        return null;
-    }
-    {
+    public List<Student> readAllStudents(){
         try {
             PreparedStatement stmnt = conn.prepareStatement("SELECT * FROM student");
         } catch (SQLException e) {
