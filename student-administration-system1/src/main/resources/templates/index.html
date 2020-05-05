@@ -17,9 +17,8 @@
             <th>Start Date</th>
         </tr>
 
-        <ul>
-        <li th:each="student:${list}">
-            <tr>
+
+            <tr th:each="student:${list}">
 
                 <td th:text="${student.firstName}"></td>
                 <td th:text="${student.lastName}"></td>
@@ -29,8 +28,7 @@
                 <td><button><a href="#">Delete</a></button></td>
 
             </tr>
-        </li>
-        </ul>
+
 
     </table>
 </main>

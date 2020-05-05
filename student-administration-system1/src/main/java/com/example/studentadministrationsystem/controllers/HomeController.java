@@ -17,11 +17,9 @@ public class HomeController {
     IStudentRepository iStudentRepository;
 
     public HomeController() {
-        try {
-            Connection connection = DriverManager.getConnection("jdbc:mysql//localhost:3306/my_company" , "admin" , "Ali010298");
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+
+            iStudentRepository = new  StudentRepositoryDB();
+
     }
 
     @GetMapping("/")
