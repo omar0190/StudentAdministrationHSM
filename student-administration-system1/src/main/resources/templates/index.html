@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -10,6 +10,29 @@
 
 <main>
     <h1>Hello World</h1>
+    <table>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Start Date</th>
+        </tr>
+
+        <ul>
+        <li th:each="student:${list}">
+            <tr>
+
+                <td th:text="${student.firstName}"></td>
+                <td th:text="${student.lastName}"></td>
+                <td th:text="${student.startDate}"></td>
+                <td><button><a href="#">Details</a></button></td>
+                <td><button><a href="#">Edit</a></button></td>
+                <td><button><a href="#">Delete</a></button></td>
+
+            </tr>
+        </li>
+        </ul>
+
+    </table>
 </main>
 
 <footer></footer>
