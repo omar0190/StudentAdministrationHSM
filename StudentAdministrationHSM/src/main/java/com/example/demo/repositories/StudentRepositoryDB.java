@@ -5,6 +5,7 @@ import com.example.demo.util.DatabaseConnectionManager;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -34,11 +35,19 @@ public class StudentRepositoryDB implements IStudentRepository {
     @Override
     public List<Student> readAllStudents(){
         try {
-            PreparedStatement stmnt = conn.prepareStatement("SELECT * FROM student");
+            PreparedStatement stmntnRead = conn.prepareStatement("SELECT * FROM student");
+
+
+            ResultSet resultSet = stmntnRead.executeQuery("SELECT * FROM student");
+
+            System.out.println(resultSet.getString(1) + resultSet.getString(2) + resultSet.getString(3) + resultSet.getInt(4 ));
+
         } catch (SQLException e) {
             e.printStackTrace();
+
         }
 
+    return readAllStudents();
     }
 
     @Override
