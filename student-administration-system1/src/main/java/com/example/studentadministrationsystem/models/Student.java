@@ -1,10 +1,11 @@
-package com.example.demo.models;
+package com.example.studentadministrationsystem.models;
 
 public class Student {
-     private String firstName;
-     private String lastName;
-     private String startDate;
-     private int cpr;
+
+    private String firstName;
+    private String lastName;
+    private String startDate;
+    private int cpr;
 
     public Student(String firstName, String lastName, String startDate, int cpr) {
         this.firstName = firstName;

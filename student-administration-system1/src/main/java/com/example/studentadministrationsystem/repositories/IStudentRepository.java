@@ -1,6 +1,6 @@
-package com.example.demo.repositories;
+package com.example.studentadministrationsystem.repositories;
 
-import com.example.demo.models.Student;
+import com.example.studentadministrationsystem.models.Student;
 
 import java.util.List;
 
@@ -17,5 +17,3 @@ public interface IStudentRepository {
 
     public boolean deleteStudent(int cpr);
 }
-
-

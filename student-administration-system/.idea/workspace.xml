@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="69d4cc81-0067-4964-a927-498a989e4855" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/studentadministrationsystem/StudentAdministrationSystemApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/studentadministrationsystem/controllers/HomeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/studentadministrationsystem/models/Course.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/studentadministrationsystem/models/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/studentadministrationsystem/repositories/IStudentRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/studentadministrationsystem/repositories/StudentRepositoryDB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/studentadministrationsystem/util/DatabaseConnectionManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/studentadministrationsystem/StudentAdministrationSystemApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1bUU3p73dEhSebFq16yE5qQsJPr" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com/example" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.studentadministrationsystem" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="StudentAdministrationSystemApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="student-administration-system" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.studentadministrationsystem.StudentAdministrationSystemApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="69d4cc81-0067-4964-a927-498a989e4855" name="Default Changelist" comment="" />
+      <created>1588685969109</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588685969109</updated>
+      <workItem from="1588685976641" duration="1827000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="340" y="134" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1588686007515">
+      <screen x="0" y="23" width="1440" height="833" />
+    </state>
+    <state x="340" y="134" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.23.1440.833@0.23.1440.833" timestamp="1588686007515" />
+    <state x="103" y="527" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1588686260768">
+      <screen x="0" y="23" width="1440" height="834" />
+    </state>
+    <state x="147" y="526" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.23.1440.833@0.23.1440.833" timestamp="1588686124651" />
+    <state x="103" y="527" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.23.1440.834@0.23.1440.834" timestamp="1588686260768" />
+    <state x="494" y="482" width="432" height="225" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1588686262281">
+      <screen x="0" y="23" width="1440" height="834" />
+    </state>
+    <state x="494" y="481" width="432" height="225" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.23.1440.833@0.23.1440.833" timestamp="1588686126632" />
+    <state x="494" y="482" width="432" height="225" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.23.1440.834@0.23.1440.834" timestamp="1588686262281" />
+    <state width="1358" height="202" key="GridCell.Tab.0.bottom" timestamp="1588688446291">
+      <screen x="0" y="23" width="1440" height="834" />
+    </state>
+    <state width="1358" height="202" key="GridCell.Tab.0.bottom/0.23.1440.834@0.23.1440.834" timestamp="1588688446291" />
+    <state width="1358" height="202" key="GridCell.Tab.0.center" timestamp="1588688446289">
+      <screen x="0" y="23" width="1440" height="834" />
+    </state>
+    <state width="1358" height="202" key="GridCell.Tab.0.center/0.23.1440.834@0.23.1440.834" timestamp="1588688446289" />
+    <state width="1358" height="202" key="GridCell.Tab.0.left" timestamp="1588688446289">
+      <screen x="0" y="23" width="1440" height="834" />
+    </state>
+    <state width="1358" height="202" key="GridCell.Tab.0.left/0.23.1440.834@0.23.1440.834" timestamp="1588688446289" />
+    <state width="1358" height="202" key="GridCell.Tab.0.right" timestamp="1588688446290">
+      <screen x="0" y="23" width="1440" height="834" />
+    </state>
+    <state width="1358" height="202" key="GridCell.Tab.0.right/0.23.1440.834@0.23.1440.834" timestamp="1588688446290" />
+    <state width="1358" height="202" key="GridCell.Tab.1.bottom" timestamp="1588688446294">
+      <screen x="0" y="23" width="1440" height="834" />
+    </state>
+    <state width="1358" height="202" key="GridCell.Tab.1.bottom/0.23.1440.834@0.23.1440.834" timestamp="1588688446294" />
+    <state width="1358" height="202" key="GridCell.Tab.1.center" timestamp="1588688446293">
+      <screen x="0" y="23" width="1440" height="834" />
+    </state>
+    <state width="1358" height="202" key="GridCell.Tab.1.center/0.23.1440.834@0.23.1440.834" timestamp="1588688446293" />
+    <state width="1358" height="202" key="GridCell.Tab.1.left" timestamp="1588688446291">
+      <screen x="0" y="23" width="1440" height="834" />
+    </state>
+    <state width="1358" height="202" key="GridCell.Tab.1.left/0.23.1440.834@0.23.1440.834" timestamp="1588688446291" />
+    <state width="1358" height="202" key="GridCell.Tab.1.right" timestamp="1588688446294">
+      <screen x="0" y="23" width="1440" height="834" />
+    </state>
+    <state width="1358" height="202" key="GridCell.Tab.1.right/0.23.1440.834@0.23.1440.834" timestamp="1588688446294" />
+    <state x="541" y="353" key="chooseDestDirectoryDialog" timestamp="1588687470252">
+      <screen x="0" y="23" width="1440" height="835" />
+    </state>
+    <state x="541" y="353" key="chooseDestDirectoryDialog/0.23.1440.835@0.23.1440.835" timestamp="1588687470252" />
+    <state x="169" y="149" key="new project wizard" timestamp="1588687668348">
+      <screen x="0" y="23" width="1440" height="835" />
+    </state>
+    <state x="169" y="149" key="new project wizard/0.23.1440.835@0.23.1440.835" timestamp="1588687668348" />
+  </component>
+</project>

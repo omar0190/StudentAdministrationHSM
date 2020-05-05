@@ -1,4 +1,5 @@
-package com.example.demo.models;
+package com.example.studentadministrationsystem.models;
+
 
 public class Course {
     private String courseName;
@@ -58,3 +59,4 @@ public class Course {
                 '}';
     }
 }
+

@@ -1,7 +1,7 @@
-package com.example.demo.repositories;
+package com.example.studentadministrationsystem.repositories;
 
-import com.example.demo.models.Student;
-import com.example.demo.util.DatabaseConnectionManager;
+import com.example.studentadministrationsystem.models.Student;
+import com.example.studentadministrationsystem.util.DatabaseConnectionManager;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -41,36 +41,36 @@ public class StudentRepositoryDB implements IStudentRepository {
         try {
             PreparedStatement stmntn = conn.prepareStatement("SELECT * FROM student");
             ResultSet rs = stmntn.executeQuery("SELECT * FROM student");
-        while (rs.next()) {
-            Student student = new Student();
-            student.setCpr(rs.getInt(1));
-            student.setFirstName(rs.getNString(2));
-            student.setLastName(rs.getNString(3));
-            student.setStartDate(rs.getString(4));
-            studentList.add(student);
-        }
+            while (rs.next()) {
+                Student student = new Student();
+                student.setCpr(rs.getInt(1));
+                student.setFirstName(rs.getNString(2));
+                student.setLastName(rs.getNString(3));
+                student.setStartDate(rs.getString(4));
+                studentList.add(student);
+            }
 
         } catch (SQLException e) {
             e.printStackTrace();
 
         }
 
-    return studentList;
+        return studentList;
     }
 
     @Override
     public Student readStudent(int cpr) {
-            Student student = new Student();
+        Student student = new Student();
         try {
             PreparedStatement stmnt = conn.prepareStatement("SELECT * FROM student where cpr =?");
             stmnt.setInt(1,cpr);
             ResultSet rs = stmnt.executeQuery();
 
             while (rs.next()){
-            student.setCpr(rs.getInt(1));
-            student.setFirstName(rs.getString(2));
-            student.setLastName(rs.getString(3));
-            student.setStartDate(rs.getString(4));
+                student.setCpr(rs.getInt(1));
+                student.setFirstName(rs.getString(2));
+                student.setLastName(rs.getString(3));
+                student.setStartDate(rs.getString(4));
             }
 
 
@@ -86,10 +86,10 @@ public class StudentRepositoryDB implements IStudentRepository {
     public boolean editStudent(Student student) {
         try {
             PreparedStatement stmnt = conn.prepareStatement("UPDATE student SET cpr=?, firstName=?, lastName=?, startDate=?");
-                stmnt.setInt(1,student.getCpr());
-                stmnt.setString(2,student.getFirstName());
-                stmnt.setString(3,student.getLastName());
-                stmnt.setString(4,student.getStartDate());
+            stmnt.setInt(1,student.getCpr());
+            stmnt.setString(2,student.getFirstName());
+            stmnt.setString(3,student.getLastName());
+            stmnt.setString(4,student.getStartDate());
             stmnt.executeUpdate();
             return true;
         } catch (SQLException e) {
