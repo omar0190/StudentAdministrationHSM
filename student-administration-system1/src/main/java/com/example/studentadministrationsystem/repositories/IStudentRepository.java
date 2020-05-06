@@ -15,5 +15,5 @@ public interface IStudentRepository {
 
     public boolean editStudent(Student student);
 
-    public boolean deleteStudent(String cpr);
+    public boolean deleteStudent(String cpr, String firstName);
 }
