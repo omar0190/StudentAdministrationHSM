@@ -3,23 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <title>Delete</title>
 
 </head>
 <body>
 
+<div class="row justify-content-center">
+
+    <h1>Delete student</h1>
+
+</div>
+<div class="row justify-content-center">
+
+    <h3>Please confirm information to delete student</h3>
+</div>
+
+
+
+<div class="row justify-content-center">
+
+
+
 <form action="/deleted" method="post">
 
+    <div class="form-group" >
     <label for="name">First Name</label><br/>
-    <input type="text" name="firstName" id="name" required><br/>
+    <input type="text" name="firstName" id="name" value="Type First name" class="form-control" required><br/>
+    </div>
 
+        <div class="form-group">
     <label for="cpr">Cpr Number</label><br/>
-    <input type="number" name="cpr" id="cpr"required><br/>
+    <input type="number" name="cpr" id="cpr" value="Type cpr number" class="form-control" required><br/>
+        </div>
 
-    <input type="submit" name="submit"><br/>
-
+            <div class="form-group">
+                <button type="submit" class="btn btn-danger" name="submit">DELETE</button><br/>
+            </div>
     </form>
-
+</div>
 </body>
 </html>

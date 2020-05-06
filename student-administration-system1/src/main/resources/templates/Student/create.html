@@ -4,30 +4,39 @@
     <meta charset="UTF-8">
     <title>Create student</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-<div>
+
+<div class="row justify-content-center">
     <form action="/created" method="post">
+
+        <div class="form-group">
         <label for="name">First Name</label><br/>
-        <input type="text" name="firstName" id="name" required><br/>
+        <input type="text" name="firstName" id="name" value="Enter first name" class="form-control" required><br/>
+        </div>
 
-
-
+        <div class="form-group">
         <label for="last">Last Name</label><br/>
-        <input type="text" name="lastName" id="last" required><br/>
+        <input type="text" name="lastName" id="last" value="Enter last name" class="form-control" required><br/>
+        </div>
 
+            <div class="form-group">
+        <label for="start">Start Date</label><br/>
+        <input type="text" name="startDate" id="start" value="Enter date" class="form-control" required><br/>
+            </div>
 
-
-        <label for="start">Starts Dato</label><br/>
-        <input type="text" name="startDate" id="start"required><br/>
-
-
-
+                <div class="form-group">
         <label for="cpr">Cpr Number</label><br/>
-        <input type="number" name="cpr" id="cpr"required><br/>
+        <input type="number" name="cpr" id="cpr" value="Enter cpr" class="form-control" required><br/>
+                </div>
 
-        <input type="submit" name="submit"><br/>
+        <div class="form-group">
+        <button type="submit" class="btn btn-primary" name="save">Save</button>
+        </div>
 </form>
 </div>
+
 </body>
 </html>
