@@ -20,7 +20,7 @@ public class StudentRepositoryDB implements IStudentRepository {
 
         try {
             PreparedStatement stmnt = conn.prepareStatement("INSERT INTO students values (?,?,?,?)");
-            stmnt.setInt(1,student.getCpr());
+            stmnt.setString(1,student.getCpr());
             stmnt.setString(2,student.getFirstName());
             stmnt.setString(3,student.getLastName());
             stmnt.setString(4,student.getStartDate());
@@ -40,7 +40,7 @@ public class StudentRepositoryDB implements IStudentRepository {
             ResultSet rs = statement.executeQuery("SELECT * FROM students");
             while (rs.next()) {
                 Student student = new Student();
-                student.setCpr(rs.getInt(1));
+                student.setCpr(rs.getString(1));
                 student.setFirstName(rs.getNString(2));
                 student.setLastName(rs.getNString(3));
                 student.setStartDate(rs.getString(4));
@@ -56,15 +56,15 @@ public class StudentRepositoryDB implements IStudentRepository {
     }
 
     @Override
-    public Student readStudent(int cpr) {
+    public Student readStudent(String cpr) {
         Student student = new Student();
         try {
             PreparedStatement stmnt = conn.prepareStatement("SELECT * FROM students where cpr =?");
-            stmnt.setInt(1,cpr);
+            stmnt.setString(1,cpr);
             ResultSet rs = stmnt.executeQuery();
 
             while (rs.next()){
-                student.setCpr(rs.getInt(1));
+                student.setCpr(rs.getString(1));
                 student.setFirstName(rs.getString(2));
                 student.setLastName(rs.getString(3));
                 student.setStartDate(rs.getString(4));
@@ -83,7 +83,7 @@ public class StudentRepositoryDB implements IStudentRepository {
     public boolean editStudent(Student student) {
         try {
             PreparedStatement stmnt = conn.prepareStatement("UPDATE students SET cpr=?, firstName=?, lastName=?, startDate=?");
-            stmnt.setInt(1,student.getCpr());
+            stmnt.setString(1,student.getCpr());
             stmnt.setString(2,student.getFirstName());
             stmnt.setString(3,student.getLastName());
             stmnt.setString(4,student.getStartDate());
@@ -96,11 +96,11 @@ public class StudentRepositoryDB implements IStudentRepository {
     }
 
     @Override
-    public boolean deleteStudent(int cpr) {
+    public boolean deleteStudent(String cpr) {
         PreparedStatement stmnt = null;
         try {
             stmnt = conn.prepareStatement("DELETE FROM students WHERE cpr=?");
-            stmnt.setInt(1,cpr);
+            stmnt.setString(1, cpr);
             stmnt.executeUpdate();
             return true;
         } catch (SQLException e) {

@@ -11,9 +11,9 @@ public interface IStudentRepository {
     public List<Student> readAllStudents();
 
 
-    public Student readStudent(int cpr);
+    public Student readStudent(String cpr);
 
     public boolean editStudent(Student student);
 
-    public boolean deleteStudent(int cpr);
+    public boolean deleteStudent(String cpr);
 }

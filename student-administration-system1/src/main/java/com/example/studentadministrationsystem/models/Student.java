@@ -5,9 +5,9 @@ public class Student {
     private String firstName;
     private String lastName;
     private String startDate;
-    private int cpr;
+    private String cpr;
 
-    public Student(String firstName, String lastName, String startDate, int cpr) {
+    public Student(String firstName, String lastName, String startDate, String cpr) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.startDate = startDate;
@@ -41,11 +41,11 @@ public class Student {
         this.startDate = startDate;
     }
 
-    public int getCpr() {
+    public String getCpr() {
         return cpr;
     }
 
-    public void setCpr(int cpr) {
+    public void setCpr(String cpr) {
         this.cpr = cpr;
     }
 
