@@ -18,7 +18,7 @@ public class CourseRepositoryDB implements iCourseRepository {
     }
 
     @Override
-    public void createRepository(Course course) {
+    public void createCourse(Course course) {
         try {
             PreparedStatement stmnt = conn.prepareStatement("INSERT INTO courses values (?,?,?,?,?)");
             stmnt.setInt(1,course.getCourseID());

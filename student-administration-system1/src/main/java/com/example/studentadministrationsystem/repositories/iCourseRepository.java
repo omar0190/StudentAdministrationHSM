@@ -11,7 +11,7 @@ public interface iCourseRepository {
 
 
 
-        public void createRepository (Course course);
+        public void createCourse (Course course);
 
 
         public List<Course> readAllCourses();
