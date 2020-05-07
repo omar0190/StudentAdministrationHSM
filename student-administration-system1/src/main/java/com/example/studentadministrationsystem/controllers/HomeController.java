@@ -57,4 +57,17 @@ public class HomeController {
         iStudentRepository.deleteStudent(cpr,firstName);
         return "redirect:/deletestudent";
     }
+    @GetMapping ("/editstudent")
+    public String editStudent(){
+
+
+        return "Student/edit";
+    }
+    @PostMapping ("/edited")
+    public String edited (@ModelAttribute Student student ){
+        iStudentRepository.editStudent(student);
+
+        return "redirect:/editstudent";
+    }
+
 }
