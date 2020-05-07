@@ -47,7 +47,7 @@
                 <td th:text="${student.startDate}"></td>
                 <td><a href="#" class="btn btn-success">Details</a></button></td>
                 <td><a href="/editstudent" class="btn btn-info">Edit</a></td>
-                <td><a th:href="@{/delete/{cpr}+${student.cpr}}" class="btn btn-danger">Delete</a></td>
+                <td><a th:href="@{'/delete/' + ${student.cpr}}" class="btn btn-danger">Delete</a></td>
 
             </tr>
     </table>
