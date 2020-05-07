@@ -1,3 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+li, a{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    color: white;
+}
+
+
+
+
+
+
+
 table {
     border-collapse: collapse; /*https://www.w3schools.com/CSSref/tryit.asp?filename=trycss_border-collapse3*/
     width: 100%;
@@ -34,3 +48,17 @@ tr:nth-child(even) {
      padding: 20px 10%;
 
  }
+
+.contact_button{
+    padding: 9px 25px;
+    background-color: #42a2b9;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.5s ease 0s;
+    border: none;
+    color: white;
+}
+
+.contact_button:hover{
+    background-color: #42a2c1;
+}
