@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>All students</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -26,11 +26,13 @@
         </ul>
     </nav>
 
-    <a href="/contact"><button class="contact_button" >Contact</button></a>
+    <a href="#"><button class="contact_button" >Log out</button></a>
 
 </header>
 
 <main>
+
+    <h1>List of students</h1>
     <table>
         <tr>
             <th>First Name</th>
@@ -45,7 +47,7 @@
                 <td th:text="${student.lastName}"></td>
                 <td th:text="${student.startDate}"></td>
                 <td><a th:href="@{'/details' + ${student.cpr}}" class="btn btn-success">Details</a></button></td>
-                <td><a href="/editstudent" class="btn btn-info">Edit</a></td>
+                <td><a th:href="@{'/editstudent' + ${student.cpr}}" class="btn btn-info">Edit</a></td>
                 <!--<td><a th:href="@{'/delete/' + ${student.cpr}}" class="btn btn-danger">Delete</a></td>-->
                 <td><a href="${pageContext.request.contextPath }" th:href=" @{'/delete/' + ${student.cpr}}" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this student?')">Delete</a></td>
 
@@ -55,6 +57,7 @@
 </main>
 
 <footer>
+    <hr/>
     <p>© 2020 - HSM</p>
 </footer>
 

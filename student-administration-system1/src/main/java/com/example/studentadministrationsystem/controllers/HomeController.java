@@ -27,6 +27,7 @@ public class HomeController {
     public String homePage(Model model){
         model.addAttribute("list",iStudentRepository.readAllStudents());
 
+
         return "index";
 
     }
@@ -42,15 +43,22 @@ public class HomeController {
         return "redirect:/createstudent";
     }
 
-    @GetMapping ("/editstudent")
-    public String editStudent(){
+    @GetMapping ("/editstudent{id}")
+    public String editStudent(@PathVariable("id") String cpr, Model model){
+
+        Student student = iStudentRepository.readStudent(cpr);
+
+        model.addAttribute("firstName", student.getFirstName());
+        model.addAttribute("lastName" , student.getLastName());
+        model.addAttribute("startDate", student.getStartDate());
+        model.addAttribute("cpr", student.getCpr());
 
 
         return "Student/edit";
     }
 
     @PostMapping ("/edited")
-    public String edited (@ModelAttribute Student student ){
+    public String edited (@ModelAttribute Student student){
         iStudentRepository.editStudent(student);
 
         return "redirect:/editstudent";

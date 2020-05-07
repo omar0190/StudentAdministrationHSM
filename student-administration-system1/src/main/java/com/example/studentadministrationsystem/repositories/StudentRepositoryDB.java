@@ -82,11 +82,11 @@ public class StudentRepositoryDB implements IStudentRepository {
     @Override
     public boolean editStudent(Student student) {
         try {
-            PreparedStatement stmnt = conn.prepareStatement("UPDATE students SET cpr=?, firstName=?, lastName=?, startDate=?");
-            stmnt.setString(1,student.getCpr());
-            stmnt.setString(2,student.getFirstName());
-            stmnt.setString(3,student.getLastName());
-            stmnt.setString(4,student.getStartDate());
+            PreparedStatement stmnt = conn.prepareStatement("UPDATE students SET firstName=?, lastName=?, startDate=? WHERE cpr = ?");
+            stmnt.setString(1,student.getFirstName());
+            stmnt.setString(2,student.getLastName());
+            stmnt.setString(3,student.getStartDate());
+            stmnt.setString(4, student.getCpr());
             stmnt.executeUpdate();
             return true;
         } catch (SQLException e) {
