@@ -42,18 +42,6 @@ public class HomeController {
         return "redirect:/createstudent";
     }
 
-    @GetMapping ("/deletestudent")
-    public String deleteStudent(){
-
-
-        return "Student/delete";
-    }
-
-    @PostMapping("/deleted")
-    public String deleted (@RequestParam String cpr){
-        iStudentRepository.deleteStudent(cpr);
-        return "redirect:/deletestudent";
-    }
     @GetMapping ("/editstudent")
     public String editStudent(){
 
