@@ -61,6 +61,20 @@ public class HomeController {
         return"redirect:/";
     }
 
+    @GetMapping("/details{id}")
+    public String getDetails(@PathVariable("id") String cpr, Model model){
+
+        Student student = iStudentRepository.readStudent(cpr);
+
+        model.addAttribute("firstName", student.getFirstName());
+        model.addAttribute("lastName" , student.getLastName());
+        model.addAttribute("startDate", student.getStartDate());
+        model.addAttribute("cpr", student.getCpr());
+
+        return "Student/details";
+    }
+
+
 
 
 

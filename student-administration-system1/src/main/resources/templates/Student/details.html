@@ -10,5 +10,43 @@
 </head>
 <body>
 
+<header class="head">
+
+    <a href="/"><img class="logo" th:src="@{/img/stud-logo.png}" alt="kea logo"/></a>
+    <nav>
+        <ul class="nav_links">
+            <li><a href="/">All students</a></li>
+            <li><a href="/createstudent">Register student</a></li>
+            <li><a href="#">All courses</a></li>
+            <li><a href="#">Register courses</a></li>
+        </ul>
+    </nav>
+
+    <a href="/contact"><button>Contact</button></a>
+
+</header>
+
+<div>
+
+    <table>
+        <tr>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Start date</th>
+            <th>Cpr</th>
+        </tr>
+        <tr>
+            <td th:text="${firstName}"></td>
+            <td th:text="${lastName}"></td>
+            <td th:text="${startDate}"></td>
+            <td th:text="${cpr}"></td>
+
+        </tr>
+    </table>
+
+</div>
+
+
+
 </body>
 </html>
