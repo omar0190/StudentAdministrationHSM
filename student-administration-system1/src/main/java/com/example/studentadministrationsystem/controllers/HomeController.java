@@ -60,6 +60,7 @@ public class HomeController {
 
         return "Student/edit";
     }
+
     @PostMapping ("/edited")
     public String edited (@ModelAttribute Student student ){
         iStudentRepository.editStudent(student);
