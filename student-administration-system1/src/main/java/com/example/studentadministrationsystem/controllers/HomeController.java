@@ -5,10 +5,7 @@ import com.example.studentadministrationsystem.repositories.IStudentRepository;
 import com.example.studentadministrationsystem.repositories.StudentRepositoryDB;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -53,8 +50,8 @@ public class HomeController {
     }
 
     @PostMapping("/deleted")
-    public String deleted (@RequestParam String cpr, @RequestParam String firstName){
-        iStudentRepository.deleteStudent(cpr,firstName);
+    public String deleted (@RequestParam String cpr){
+        iStudentRepository.deleteStudent(cpr);
         return "redirect:/deletestudent";
     }
     @GetMapping ("/editstudent")
@@ -68,6 +65,11 @@ public class HomeController {
         iStudentRepository.editStudent(student);
 
         return "redirect:/editstudent";
+    }
+    @GetMapping ("/delete/{cpr}")
+    public String deleteButton(@PathVariable("cpr") String cpr){
+        iStudentRepository.deleteStudent(cpr);
+        return"redirect:/";
     }
 
 }

@@ -19,8 +19,8 @@
     <a href="/"><img class="logo" th:src="@{/img/stud-logo.png}" alt="kea logo"/></a>
     <nav>
         <ul class="nav_links">
-            <li><a href="#">All students</a></li>
-            <li><a href="#">Register student</a></li>
+            <li><a href="/">All students</a></li>
+            <li><a href="/createstudent">Register student</a></li>
             <li><a href="#">All courses</a></li>
             <li><a href="#">Register courses</a></li>
         </ul>
@@ -46,8 +46,8 @@
                 <td th:text="${student.lastName}"></td>
                 <td th:text="${student.startDate}"></td>
                 <td><a href="#" class="btn btn-success">Details</a></button></td>
-                <td><a href="#" class="btn btn-info">Edit</a></td>
-                <td><a href="/deletestudent" class="btn btn-danger">Delete</a></td>
+                <td><a href="/editstudent" class="btn btn-info">Edit</a></td>
+                <td><a th:href="@{/delete/{cpr}+${student.cpr}}" class="btn btn-danger">Delete</a></td>
 
             </tr>
     </table>

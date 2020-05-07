@@ -96,12 +96,11 @@ public class StudentRepositoryDB implements IStudentRepository {
     }
 
     @Override
-    public boolean deleteStudent(String cpr , String firstName) {
+    public boolean deleteStudent(String cpr) {
         PreparedStatement stmnt = null;
         try {
-            stmnt = conn.prepareStatement("DELETE FROM students WHERE cpr=? AND firstName=?");
+            stmnt = conn.prepareStatement("DELETE FROM students WHERE cpr=?");
             stmnt.setString(1, cpr);
-            stmnt.setString(2, firstName);
             stmnt.executeUpdate();
             return true;
         } catch (SQLException e) {
