@@ -1,8 +1,7 @@
 package com.example.studentadministrationsystem.controllers;
 
 import com.example.studentadministrationsystem.models.Course;
-import com.example.studentadministrationsystem.models.Student;
-import com.example.studentadministrationsystem.repositories.iCourseRepository;
+import com.example.studentadministrationsystem.repositories.ICourseRepository;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -11,7 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 public class CourseController {
 
-    iCourseRepository IcoursesRepository;
+    ICourseRepository IcoursesRepository;
 
     @GetMapping("/")
     public String homePage(Model model){

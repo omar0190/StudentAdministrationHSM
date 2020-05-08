@@ -7,7 +7,7 @@ import com.example.studentadministrationsystem.util.DatabaseConnectionManager;
 import java.sql.Connection;
 import java.util.List;
 
-public interface iCourseRepository {
+public interface ICourseRepository {
 
 
 

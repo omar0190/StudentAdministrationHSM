@@ -1,14 +1,13 @@
 package com.example.studentadministrationsystem.repositories;
 
 import com.example.studentadministrationsystem.models.Course;
-import com.example.studentadministrationsystem.models.Student;
 import com.example.studentadministrationsystem.util.DatabaseConnectionManager;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CourseRepositoryDB implements iCourseRepository {
+public class CourseRepositoryDB implements ICourseRepository {
 
     private Connection conn;
 
