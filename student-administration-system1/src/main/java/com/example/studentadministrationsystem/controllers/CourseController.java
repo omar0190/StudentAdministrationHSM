@@ -1,9 +1,9 @@
 package com.example.studentadministrationsystem.controllers;
 
 import com.example.studentadministrationsystem.models.Course;
+import com.example.studentadministrationsystem.models.Student;
 import com.example.studentadministrationsystem.repositories.CourseRepositoryDB;
 import com.example.studentadministrationsystem.repositories.ICourseRepository;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -24,7 +24,7 @@ public class CourseController {
     public String homePage(Model model){
         model.addAttribute("list",iCourseRepository.readAllCourses());
 
-        return "Course/allstudents";
+        return "allcourses";
 
     }
     @GetMapping("/createcourse")
@@ -39,21 +39,8 @@ public class CourseController {
         return "redirect:/createcourse";
     }
 
-    @GetMapping ("/editcourse")
-    public String editCourse(){
 
-
-        return "Course/edit";
-    }
-
-
-    @PostMapping ("/edited")
-    public String edited (@ModelAttribute Course course ){
-        iCourseRepository.editCourse(course);
-
-        return "redirect:/editcourse";
-    }
-    @GetMapping ("/delete/{id}")
+    @GetMapping ("/deleteCourse{id}")
     public String deleteButton(@PathVariable("id") int courseID){
         iCourseRepository.deleteCourse(courseID);
         return"redirect:/";
@@ -69,9 +56,30 @@ public class CourseController {
         model.addAttribute("etcs", course.getEtcs());
 
 
-
-
         return "Course/details";
+    }
+
+
+    @GetMapping ("/editcourse{id}")
+    public String editStudent(@PathVariable("id") int courseID, Model model){
+
+        Course course = iCourseRepository.readCourses(courseID);
+
+        model.addAttribute("courseID", course.getCourseID());
+        model.addAttribute("courseName", course.getCourseName());
+        model.addAttribute("lastName" , course.getStartDate());
+        model.addAttribute("startDate", course.getCourseDescription());
+        model.addAttribute("cpr", course.getEtcs());
+
+
+        return "Course/edit";
+    }
+
+    @PostMapping ("/edited")
+    public String edited (@ModelAttribute Course course){
+        iCourseRepository.editCourse(course);
+
+        return "redirect:/editcourse";
     }
 
 }
