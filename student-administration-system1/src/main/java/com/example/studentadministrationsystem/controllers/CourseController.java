@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
-@Controller
 public class CourseController {
 
     ICourseRepository iCourseRepository;
@@ -25,7 +24,7 @@ public class CourseController {
     public String homePage(Model model){
         model.addAttribute("list",iCourseRepository.readAllCourses());
 
-        return "allstudents";
+        return "Course/allstudents";
 
     }
     @GetMapping("/createcourse")
@@ -64,9 +63,9 @@ public class CourseController {
         Course course = iCourseRepository.readCourses(courseID);
 
         model.addAttribute("coursesID", course.getCourseID());
-        model.addAttribute("CorseName", course.getCourseName());
+        model.addAttribute("courseName", course.getCourseName());
         model.addAttribute("startDate", course.getStartDate());
-        model.addAttribute("courseDiscrpition", course.getCourseDescription());
+        model.addAttribute("courseDescription", course.getCourseDescription());
         model.addAttribute("etcs", course.getEtcs());
 
 
