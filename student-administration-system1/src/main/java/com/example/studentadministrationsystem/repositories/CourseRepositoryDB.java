@@ -19,12 +19,11 @@ public class CourseRepositoryDB implements ICourseRepository {
     @Override
     public void createCourse(Course course) {
         try {
-            PreparedStatement stmnt = conn.prepareStatement("INSERT INTO courses values (?,?,?,?,?)");
-            stmnt.setInt(1,course.getCourseID());
-            stmnt.setString(2,course.getCourseName());
-            stmnt.setString(3,course.getStartDate());
-            stmnt.setString(4,course.getCourseDescription());
-            stmnt.setDouble(5,course.getEtcs());
+            PreparedStatement stmnt = conn.prepareStatement("INSERT INTO courses(courseName, startDate, CourseDescription, etcs) values (?,?,?,?)");
+            stmnt.setString(1,course.getCourseName());
+            stmnt.setString(2,course.getStartDate());
+            stmnt.setString(3,course.getCourseDescription());
+            stmnt.setDouble(4,course.getEtcs());
 
             stmnt.executeUpdate();
         } catch (SQLException e) {
@@ -35,7 +34,7 @@ public class CourseRepositoryDB implements ICourseRepository {
 
     @Override
     public List<Course> readAllCourses() {
-        List <Course> courselist = new ArrayList<>();
+        List <Course> courseList = new ArrayList<>();
 
         try {
             Statement statement = conn.createStatement();
@@ -47,11 +46,12 @@ public class CourseRepositoryDB implements ICourseRepository {
                 course.setStartDate(rs.getString(3));
                 course.setCourseDescription(rs.getString(4));
                 course.setEtcs(rs.getDouble(5));
+                courseList.add(course);
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return courselist;
+        return courseList;
     }
 
     @Override
@@ -79,12 +79,12 @@ public class CourseRepositoryDB implements ICourseRepository {
     @Override
     public boolean editCourse(Course course) {
         try {
-            PreparedStatement stmnt = conn.prepareStatement("UPDATE courses SET courseID=?, courseName=?, startDate=?, courseDescription=?, etcs");
-            stmnt.setInt(1,course.getCourseID());
-            stmnt.setString(2,course.getCourseName());
-            stmnt.setString(3,course.getStartDate());
-            stmnt.setString(4,course.getCourseDescription());
-            stmnt.setDouble(5,course.getEtcs());
+            PreparedStatement stmnt = conn.prepareStatement("UPDATE courses SET courseName=?, startDate=?, courseDescription=?, etcs=?");
+
+            stmnt.setString(1,course.getCourseName());
+            stmnt.setString(2,course.getStartDate());
+            stmnt.setString(3,course.getCourseDescription());
+            stmnt.setDouble(4,course.getEtcs());
 
             stmnt.executeUpdate();
             return true;
@@ -99,7 +99,7 @@ public class CourseRepositoryDB implements ICourseRepository {
     public boolean deleteCourse(int courseID) {
         PreparedStatement stmnt = null;
         try {
-            stmnt = conn.prepareStatement("DELETE FROM courses WHERE cpr=?");
+            stmnt = conn.prepareStatement("DELETE FROM courses WHERE courseID=?");
             stmnt.setInt(1, courseID);
             stmnt.executeUpdate();
             return true;

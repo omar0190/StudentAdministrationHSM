@@ -1,22 +1,31 @@
 package com.example.studentadministrationsystem.controllers;
 
 import com.example.studentadministrationsystem.models.Course;
+import com.example.studentadministrationsystem.repositories.CourseRepositoryDB;
 import com.example.studentadministrationsystem.repositories.ICourseRepository;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
+@Controller
 public class CourseController {
 
-    ICourseRepository IcoursesRepository;
+    ICourseRepository iCourseRepository;
 
-    @GetMapping("/")
+    public CourseController(){
+
+        iCourseRepository = new CourseRepositoryDB();
+    }
+
+
+    @GetMapping("/allcourses")
     public String homePage(Model model){
-        model.addAttribute("list",IcoursesRepository.readAllCourses());
+        model.addAttribute("list",iCourseRepository.readAllCourses());
 
-        return "index";
+        return "allstudents";
 
     }
     @GetMapping("/createcourse")
@@ -27,7 +36,7 @@ public class CourseController {
 }
     @PostMapping("/created")
     public String created(@ModelAttribute Course course){
-        IcoursesRepository.createCourse(course);
+        iCourseRepository.createCourse(course);
         return "redirect:/createcourse";
     }
 
@@ -41,18 +50,18 @@ public class CourseController {
 
     @PostMapping ("/edited")
     public String edited (@ModelAttribute Course course ){
-        IcoursesRepository.editCourse(course);
+        iCourseRepository.editCourse(course);
 
         return "redirect:/editcourse";
     }
     @GetMapping ("/delete/{id}")
     public String deleteButton(@PathVariable("id") int courseID){
-        IcoursesRepository.deleteCourse(courseID);
+        iCourseRepository.deleteCourse(courseID);
         return"redirect:/";
     }
     @GetMapping("/details{id}")
     public String getDetails(@PathVariable("id") int courseID, Model model){
-        Course course = IcoursesRepository.readCourses(courseID);
+        Course course = iCourseRepository.readCourses(courseID);
 
         model.addAttribute("coursesID", course.getCourseID());
         model.addAttribute("CorseName", course.getCourseName());
