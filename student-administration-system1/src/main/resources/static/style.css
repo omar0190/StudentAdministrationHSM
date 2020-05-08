@@ -48,20 +48,77 @@ tr:nth-child(even) {
      display: flex;
      justify-content: space-evenly;
      width: 100%;
-     padding: 10px 5%;
+     padding: 15px 10%;
 
  }
 
 .contact_button{
     padding: 9px 25px;
-    background-color: #42a2b9;
+    background-color: #2c3d50;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.5s ease 0s;
-    border: none;
+    border: 1px solid black;
     color: white;
 }
 
 button:hover{
-    background-color: #42a2c1;
+    background-color: black;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media (max-width: 1000px){
+
+    nav ul li a {
+        font-size: 16px;
+    }
+    .head{
+        justify-content: space-between;
+    }
+
+}
+
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+
+    ul{
+        position: fixed;
+        width: 40%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 40px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover, a.active{
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
 }
