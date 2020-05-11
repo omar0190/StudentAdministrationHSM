@@ -79,12 +79,13 @@ public class CourseRepositoryDB implements ICourseRepository {
     @Override
     public boolean editCourse(Course course) {
         try {
-            PreparedStatement stmnt = conn.prepareStatement("UPDATE courses SET courseName=?, startDate=?, courseDescription=?, etcs=?");
+            PreparedStatement stmnt = conn.prepareStatement("UPDATE courses SET courseName=?, startDate=?, courseDescription=?, etcs=? WHERE courseID = ?");
 
             stmnt.setString(1,course.getCourseName());
             stmnt.setString(2,course.getStartDate());
             stmnt.setString(3,course.getCourseDescription());
             stmnt.setDouble(4,course.getEtcs());
+            stmnt.setInt(5, course.getCourseID());
 
             stmnt.executeUpdate();
             return true;

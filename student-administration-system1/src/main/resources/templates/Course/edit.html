@@ -1,10 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Edit courses</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link th:href="@{style.css}" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"
 </head>
 <body>
+
+<header class="head">
+
+
+
+
+    <a href="/"><img class="logo" th:src="@{/img/stud-logo.png}" alt="kea logo"/></a>
+
+    <nav>
+
+        <ul class="nav_links">
+            <li><a href="/">All students</a></li>
+            <li><a href="/createstudent">Register student</a></li>
+            <li><a href="/courses">All courses</a></li>
+            <li><a href="/createcourse">Register courses</a></li>
+        </ul>
+
+    </nav>
+
+    <a href="#"><button class="contact_button" >Log out</button></a>
+
+
+
+</header>
+<br/>
+<div class="row justify-content-center"><h1>Edit Courses</h1></div>
+
+
+<div class="row justify-content-center">
+    <form action="/courseEdited" method="post">
+
+
+        <div class="form-group">
+            <label for="name">Course Name</label><br/>
+            <input type="text" name="courseName" id="name" th:value="${courseName}"  class="form-control" required><br/>
+        </div>
+
+        <div class="form-group">
+            <label for="last">Start Date</label><br/>
+            <input type="text" name="startDate" id="last" th:value="${startDate}"  class="form-control" required><br/>
+        </div>
+
+        <div class="form-group">
+            <label for="start">Description</label><br/>
+            <input type="text" name="courseDescription" id="start" th:value="${description}"  class="form-control" required><br/>
+        </div>
+
+        <div class="form-group">
+            <label for="id">ETCS</label><br/>
+            <input type="number" name="etcs" id="id" th:value="${etcs}" class="form-control" required><br/>
+        </div>
+
+        <div class="form-group">
+            <input type="hidden" name="courseID" th:value="${courseID}"  class="form-control" required><br/>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary" name="save">Update</button>
+        </div>
+
+    </form>
+
+</div>
+
+<div class="container">
+    <footer>
+        <hr/>
+        <p>© 2020 - HSM</p>
+    </footer>
+</div>
+
 
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>All Courses</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -40,6 +40,7 @@
 
     <main>
 
+        <br/>
         <h1>List of courses</h1>
 
         <table>
@@ -58,7 +59,7 @@
                 <td th:text="${course.etcs}"></td>
 
                 <td><a href="#" class="btn btn-success">Details</a></td>
-                <td><a href="#" class="btn btn-info">Edit</a></td>
+                <td><a th:href="@{'/editCourse' + ${course.courseID}}" class="btn btn-info">Edit</a></td>
                 <!--<td><a th:href="@{'/delete/' + ${student.cpr}}" class="btn btn-danger">Delete</a></td>-->
                 <td><a href="#" class="btn btn-danger">Delete</a></td>
 

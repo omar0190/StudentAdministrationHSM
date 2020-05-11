@@ -61,7 +61,7 @@ public class HomeController {
     public String edited (@ModelAttribute Student student){
         iStudentRepository.editStudent(student);
 
-        return "redirect:/editstudent";
+        return "redirect:/";
     }
     @GetMapping ("/delete/{id}")
     public String deleteButton(@PathVariable("id") String cpr){
