@@ -2,6 +2,7 @@ package com.example.studentadministrationsystem.controllers;
 
 
 import com.example.studentadministrationsystem.models.Course;
+import com.example.studentadministrationsystem.models.Student;
 import com.example.studentadministrationsystem.repositories.CourseRepositoryDB;
 import com.example.studentadministrationsystem.repositories.ICourseRepository;
 import org.springframework.stereotype.Controller;
@@ -61,6 +62,26 @@ public class CourseController {
         iCourseRepository.editCourse(course);
 
         return "redirect:/courses";
+    }
+
+
+    @GetMapping("/courseDetails{id}")
+    public String courseDetails(@PathVariable("id") int courseId, Model model){
+
+        Course course = iCourseRepository.readCourses(courseId);
+
+        model.addAttribute("courseName", course.getCourseName());
+        model.addAttribute("startDate" , course.getStartDate());
+        model.addAttribute("description", course.getCourseDescription());
+        model.addAttribute("etcs", course.getEtcs());
+        model.addAttribute("id", course.getCourseID());
+
+        return "Course/details";
+    }
+    @GetMapping ("/deleteCourses{id}")
+    public String deleteButton(@PathVariable("id") int courseID){
+        iCourseRepository.deleteCourse(courseID);
+        return"redirect:/courses";
     }
 
 

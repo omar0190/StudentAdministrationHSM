@@ -1,10 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Course details</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link th:href="@{style.css}" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"
+
 </head>
 <body>
+
+<header class="head">
+
+    <a href="/"><img class="logo" th:src="@{/img/stud-logo.png}" alt="kea logo"/></a>
+
+    <nav>
+
+        <ul class="nav_links">
+            <li><a href="/">All students</a></li>
+            <li><a href="/createstudent">Register student</a></li>
+            <li><a href="/courses">All courses</a></li>
+            <li><a href="/createcourse">Register courses</a></li>
+        </ul>
+
+    </nav>
+
+    <a href="#"><button class="contact_button" >Log out</button></a>
+
+
+</header>
+
+<div class="container">
+    <br/>
+    <h1>Course details</h1>
+
+    <table>
+        <tr>
+            <th>Course name</th>
+            <th>Start Date</th>
+            <th>Course description</th>
+            <th>ETCS</th>
+            <th>Course ID</th>
+        </tr>
+        <tr>
+            <td th:text="${courseName}"></td>
+            <td th:text="${startDate}"></td>
+            <td th:text="${description}"></td>
+            <td th:text="${etcs}"></td>
+            <td th:text="${id}"></td>
+
+        </tr>
+    </table>
+
+    <footer>
+        <hr/>
+        <p>© 2020 - HSM</p>
+    </footer>
+
+</div>
+
+
 
 </body>
 </html>

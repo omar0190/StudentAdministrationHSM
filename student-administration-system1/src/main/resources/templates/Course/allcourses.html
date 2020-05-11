@@ -58,10 +58,9 @@
                 <td th:text="${course.courseDescription}"></td>
                 <td th:text="${course.etcs}"></td>
 
-                <td><a href="#" class="btn btn-success">Details</a></td>
+                <td><a th:href="@{'/courseDetails' + ${course.courseID}}" class="btn btn-success">Details</a></td>
                 <td><a th:href="@{'/editCourse' + ${course.courseID}}" class="btn btn-info">Edit</a></td>
-                <!--<td><a th:href="@{'/delete/' + ${student.cpr}}" class="btn btn-danger">Delete</a></td>-->
-                <td><a href="#" class="btn btn-danger">Delete</a></td>
+                <td><a href="${pageContext.request.contextPath }" th:href=" @{'/deleteCourses' + ${course.courseID}}" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this course?')">Delete</a></td>
 
             </tr>
         </table>
