@@ -39,7 +39,7 @@ public class CourseController {
     @PostMapping("/courseCreated")
     public String created(@ModelAttribute Course course){
         iCourseRepository.createCourse(course);
-        return "redirect:/createcourse";
+        return "redirect:/courses";
     }
 
     @GetMapping("/editCourse{id}")

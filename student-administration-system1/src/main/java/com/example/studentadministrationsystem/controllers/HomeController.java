@@ -40,7 +40,7 @@ public class HomeController {
 @PostMapping ("/created")
     public String created(@ModelAttribute Student student){
         iStudentRepository.createStudent(student);
-        return "redirect:/createstudent";
+        return "redirect:/";
     }
 
     @GetMapping ("/editstudent{id}")
