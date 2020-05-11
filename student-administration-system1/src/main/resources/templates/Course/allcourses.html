@@ -14,27 +14,24 @@
 
 
 
-    <header class="head">
+<header class="head">
 
+    <a href="/"><img class="logo" th:src="@{/img/stud-logo.png}" alt="kea logo"/></a>
 
-        <a href="/"><img class="logo" th:src="@{/img/stud-logo.png}" alt="kea logo"/></a>
+    <nav>
 
-        <nav>
+        <ul class="nav_links">
+            <li><a href="/">All students</a></li>
+            <li><a href="/createstudent">Register student</a></li>
+            <li><a href="/courses">All courses</a></li>
+            <li><a href="/createcourse">Register courses</a></li>
+        </ul>
 
-            <ul class="nav_links">
-                <li><a href="/">All students</a></li>
-                <li><a href="/createstudent">Register student</a></li>
-                <li><a href="/courses">All courses</a></li>
-                <li><a href="/createcourse">Register courses</a></li>
-            </ul>
+    </nav>
 
-        </nav>
+    <a href="/contact"><button class="contact_button" >Contact</button></a>
 
-        <a href="#"><button class="contact_button" >Log out</button></a>
-
-
-
-    </header>
+</header>
 
 <div class="container">
 

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>contact</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link th:href="@{style.css}" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+</head>
+<body>
+
+<header class="head">
+
+    <a href="/"><img class="logo" th:src="@{/img/stud-logo.png}" alt="kea logo"/></a>
+
+    <nav>
+
+        <ul class="nav_links">
+            <li><a href="/">All students</a></li>
+            <li><a href="/createstudent">Register student</a></li>
+            <li><a href="/courses">All courses</a></li>
+            <li><a href="/createcourse">Register courses</a></li>
+        </ul>
+
+    </nav>
+
+    <a href="/contact"><button class="contact_button" >Contact</button></a>
+
+</header>
+
+<div class="container">
+
+<main>
+    <br/>
+    <br/>
+
+
+
+        <h1>Contact</h1>
+        <p>Email: compkea@com.dk</p>
+
+
+        <footer>
+            <hr/>
+            <p>© 2020 - HSM</p>
+        </footer>
+
+</main>
+
+</div>
+
+
+
+</body>
+</html>

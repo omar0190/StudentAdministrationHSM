@@ -82,7 +82,10 @@ public class HomeController {
         return "Student/details";
     }
 
-
+@GetMapping("/contact")
+    public String contact(){
+        return "contact";
+}
 
 
 
